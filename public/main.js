@@ -103,31 +103,31 @@ function anime(wed){
 
     if(wed.indexOf("clouds") > -1){
         
-       divm.style.backgroundImage = "url('/weather_anime/clouds.gif')"
-       divm.style.backgroundRepeat = "no-repeat"
-       divm.style.backgroundSize = "cover"
+       var picloc = "/weather_anime/clouds.gif"
        divm.style.color = "white"
+
+       weatherDisplay(picloc)
     } else if(wed.indexOf("clear") > -1){
         
-        divm.style.backgroundImage = "url('/weather_anime/clear.gif')"
-        divm.style.backgroundRepeat = "no-repeat"
+         var picloc= "/weather_anime/clear.gif"
         divm.style.color = "black"
-        divm.style.backgroundSize = "cover"
+        weatherDisplay(picloc)
+        
     }else if(wed.indexOf("rain") > -1){
         
-        divm.style.backgroundImage = "url('/weather_anime/rain.gif')"
-        divm.style.backgroundRepeat = "no-repeat"
-        divm.style.backgroundSize = "cover"
+        var picloc = "/weather_anime/rain.gif"
+        weatherDisplay(picloc)
+        
     }else if(wed.indexOf("snow") > -1){
         
-        divm.style.backgroundImage = "url('/weather_anime/snow.gif')"
-        divm.style.backgroundRepeat = "no-repeat"
-        divm.style.backgroundSize = "cover"
+        var picloc = "/weather_anime/snow.gif"
+        weatherDisplay(picloc)
     }else if(wed.indexOf("thounderstorm") > -1){
         
-        divm.style.backgroundImage = "url('/weather_anime/thunderstaorm.gif')"
-        divm.style.backgroundRepeat = "no-repeat"
-        divm.style.backgroundSize = "cover"
+        var picloc = "/weather_anime/thunderstaorm.gif";
+        weatherDisplay(picloc)
+        
+    
     }
 
 
@@ -136,5 +136,9 @@ function anime(wed){
 } 
 
   
-
+function weatherDisplay(picPath){
+    divm.style.backgroundImage = "url('"+ picPath+"')"
+        divm.style.backgroundRepeat = "no-repeat"
+        divm.style.backgroundSize = "cover"
+}
     

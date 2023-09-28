@@ -3,6 +3,7 @@ var div = document.getElementById("di")
 var sea = document.getElementById("sea")
 var divm = document.querySelector(".div")
 
+
 var btt = document.createElement("button")
 btt.innerHTML = "search"
 btt.style.backgroundColor ="white"
@@ -99,35 +100,39 @@ function anime(wed){
 
     if(wed.indexOf("clouds") > -1){
         
-       divm.style.backgroundImage = "url('/weather_anime/clouds.gif')"
-       divm.style.backgroundRepeat = "no-repeat"
-       divm.style.backgroundSize = "cover"
+       var urls = '/weather_anime/clouds.gif'
+      
        divm.style.color = "white"
+
+       display(urls)
     } else if(wed.indexOf("clear") > -1){
         
-        divm.style.backgroundImage = "url('/weather_anime/clear.gif')"
-        divm.style.backgroundRepeat = "no-repeat"
+      var urls = '/weather_anime/clear.gif'
+        
         divm.style.color = "black"
-        divm.style.backgroundSize = "cover"
+
+        display(urls)
+      
     }else if(wed.indexOf("rain") > -1){
         
-        divm.style.backgroundImage = "url('/weather_anime/rain.gif')"
-        divm.style.backgroundRepeat = "no-repeat"
-        divm.style.backgroundSize = "cover"
+        var urls = '/weather_anime/rain.gif'
+        
     }else if(wed.indexOf("snow") > -1){
         
-        divm.style.backgroundImage = "url('/weather_anime/snow.gif')"
-        divm.style.backgroundRepeat = "no-repeat"
-        divm.style.backgroundSize = "cover"
+        var urls = '/weather_anime/snow.gif'
+        display(urls)
     }else if(wed.indexOf("thounderstorm") > -1){
         
-        divm.style.backgroundImage = "url('/weather_anime/thunderstaorm.gif')"
-        divm.style.backgroundRepeat = "no-repeat"
-        divm.style.backgroundSize = "cover"
+        var urls = '/weather_anime/thunderstaorm.gif'
+        display(urls)
     }
 
 
-
+function display(url){
+    divm.style.backgroundImage = "url('"+ url+"')"
+        divm.style.backgroundRepeat = "no-repeat"
+        divm.style.backgroundSize = "cover"
+}
 
 } 
 

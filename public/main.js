@@ -1,3 +1,6 @@
+
+
+
 var loca = document.getElementById("loc")
 var div = document.getElementById("di")
 var sea = document.getElementById("sea")
@@ -100,6 +103,7 @@ function anime(wed){
 
     if(wed.indexOf("clouds") > -1){
         
+<<<<<<< HEAD
        var urls = '/weather_anime/clouds.gif'
       
        divm.style.color = "white"
@@ -125,6 +129,33 @@ function anime(wed){
         
         var urls = '/weather_anime/thunderstaorm.gif'
         display(urls)
+=======
+       var picloc = "/weather_anime/clouds.gif"
+       divm.style.color = "white"
+
+       weatherDisplay(picloc)
+    } else if(wed.indexOf("clear") > -1){
+        
+         var picloc= "/weather_anime/clear.gif"
+        divm.style.color = "black"
+        weatherDisplay(picloc)
+        
+    }else if(wed.indexOf("rain") > -1){
+        
+        var picloc = "/weather_anime/rain.gif"
+        weatherDisplay(picloc)
+        
+    }else if(wed.indexOf("snow") > -1){
+        
+        var picloc = "/weather_anime/snow.gif"
+        weatherDisplay(picloc)
+    }else if(wed.indexOf("thounderstorm") > -1){
+        
+        var picloc = "/weather_anime/thunderstaorm.gif";
+        weatherDisplay(picloc)
+        
+    
+>>>>>>> e05ed5aa3bc647502a3f7b926f42acb3ed5cd8b9
     }
 
 
@@ -137,5 +168,9 @@ function display(url){
 } 
 
   
-
+function weatherDisplay(picPath){
+    divm.style.backgroundImage = "url('"+ picPath+"')"
+        divm.style.backgroundRepeat = "no-repeat"
+        divm.style.backgroundSize = "cover"
+}
     

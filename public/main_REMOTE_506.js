@@ -1,6 +1,3 @@
-import {key} from './hide'
-
-
 var loca = document.getElementById("loc")
 var div = document.getElementById("di")
 var sea = document.getElementById("sea")
@@ -24,7 +21,7 @@ btt.addEventListener("click",function(){
 var locaV = loca.value;
 console.log(locaV)
 
-fetch("https://api.openweathermap.org/data/2.5/weather?q="+locaV+"&appid="+ key+"").then(function(res){
+fetch("https://api.openweathermap.org/data/2.5/weather?q="+locaV+"&appid=355ffb993ad083a3d5cafaf7d365ffd2").then(function(res){
     return res.json()
 }).then(function(data){
 
@@ -103,42 +100,38 @@ function anime(wed){
 
     if(wed.indexOf("clouds") > -1){
         
-       var picloc = "/weather_anime/clouds.gif"
+       var urls = '/weather_anime/clouds.gif'
+      
        divm.style.color = "white"
 
-       weatherDisplay(picloc)
+       display(urls)
     } else if(wed.indexOf("clear") > -1){
         
-         var picloc= "/weather_anime/clear.gif"
-        divm.style.color = "black"
-        weatherDisplay(picloc)
+      var urls = '/weather_anime/clear.gif'
         
+        divm.style.color = "black"
+
+        display(urls)
+      
     }else if(wed.indexOf("rain") > -1){
         
-        var picloc = "/weather_anime/rain.gif"
-        weatherDisplay(picloc)
+        var urls = '/weather_anime/rain.gif'
         
     }else if(wed.indexOf("snow") > -1){
         
-        var picloc = "/weather_anime/snow.gif"
-        weatherDisplay(picloc)
+        var urls = '/weather_anime/snow.gif'
+        display(urls)
     }else if(wed.indexOf("thounderstorm") > -1){
         
-        var picloc = "/weather_anime/thunderstaorm.gif";
-        weatherDisplay(picloc)
-        
-    
+        var urls = '/weather_anime/thunderstaorm.gif'
+        display(urls)
     }
 
 
-
-
-} 
-
-  
-function weatherDisplay(picPath){
-    divm.style.backgroundImage = "url('"+ picPath+"')"
+function display(url){
+    divm.style.backgroundImage = "url('"+ url+"')"
         divm.style.backgroundRepeat = "no-repeat"
         divm.style.backgroundSize = "cover"
 }
-    
+
+} 

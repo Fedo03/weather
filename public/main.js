@@ -1,4 +1,4 @@
-import {key} from './hide'
+
 
 
 var loca = document.getElementById("loc")
@@ -24,7 +24,7 @@ btt.addEventListener("click",function(){
 var locaV = loca.value;
 console.log(locaV)
 
-fetch("https://api.openweathermap.org/data/2.5/weather?q="+locaV+"&appid="+ key+"").then(function(res){
+fetch("https://api.openweathermap.org/data/2.5/weather?q="+locaV+"&appid=355ffb993ad083a3d5cafaf7d365ffd2").then(function(res){
     return res.json()
 }).then(function(data){
 

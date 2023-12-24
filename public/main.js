@@ -84,8 +84,8 @@ function wead(wead){
 function sped(sped){
     
     var de = document.createElement("p")
-    de.innerHTML = "wind speed : " + sped
-    de.style.fontSize = "20px"
+    de.innerHTML = "wind speed : " + sped;
+    de.style.fontSize = "20px";
     return de
 
 }
